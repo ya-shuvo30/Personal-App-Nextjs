@@ -9,6 +9,7 @@ const navLinks = [
   { label: "About", target: "about" },
   { label: "Skills", target: "skills" },
   { label: "Projects", target: "projects" },
+  { label: "Resume", target: "resume" },
   { label: "Contact", target: "contact" },
 ];
 
@@ -48,7 +49,7 @@ export function Navigation() {
             onClick={() => scrollTo("hero")}
             className="heading-md gradient-text tracking-tight"
           >
-            &lt;DevPortfolio /&gt;
+            yeasin.dev
           </button>
           <div className="hidden items-center gap-2 md:flex">
             {navLinks.map((link) => (

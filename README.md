@@ -32,6 +32,12 @@ Modern, dark-themed portfolio highlighting my work across React/Next.js frontend
 
 Production-grade health membership platform featuring Next.js + React (Tailwind), Django REST API, PostgreSQL database, JWT authentication, Redis caching, Celery-powered background jobs, PDF generation, Docker + Nginx deployment, and CI/CD automation.
 
+## Live Resume Snapshot
+
+- Dedicated section inside the main navigation (`Resume`) shows a fully readable resume without forcing downloads.  
+- Experience, education, and certification data live in `src/components/ResumeSection.tsx` for quick updates.  
+- The layout mirrors proposal-ready content so clients can validate skills directly on the site.
+
 ## Technical Stack
 
 ### Frontend
@@ -76,6 +82,7 @@ src/
     ├── AboutSection.tsx
     ├── SkillsSection.tsx
     ├── ProjectsSection.tsx
+    ├── ResumeSection.tsx
     ├── ContactSection.tsx
     ├── figma/ImageWithFallback.tsx
     └── ui/{button,card,input,textarea}.tsx
@@ -96,6 +103,7 @@ npm run dev
 
 - Personalize copy inside each component (`HeroSection`, `AboutSection`, etc.).
 - Update skills/project arrays in `SkillsSection.tsx` and `ProjectsSection.tsx` to showcase new work.
+- Adjust the live resume data inside `ResumeSection.tsx` to reflect new roles, education, or certifications.
 - Allow additional external image hosts via `next.config.ts` → `images.remotePatterns`.
 - Set `NEXT_PUBLIC_BASE_PATH` only when deploying under a subdirectory (e.g., `/Personal-App-Nextjs`); leave it unset for apex/custom domains so assets resolve from `/`.
 - Tailwind tokens, gradients, and typography utilities live in `src/app/globals.css`.

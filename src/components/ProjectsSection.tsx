@@ -19,37 +19,37 @@ const projects: Project[] = [
   {
     title: "BrightLife Membership Platform",
     description:
-      "Full-stack health membership ecosystem with dynamic benefits, PDF generation, JWT auth, and Celery-powered background jobs.",
+      "Full-stack health membership ecosystem with smart eligibility, PDF policy packs, JWT auth, and Celery-powered renewals that serve 20K+ Bangladeshi members.",
     tech: ["Next.js", "Django REST", "PostgreSQL", "Redis", "Docker"],
     image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1600&q=80",
-    live: "https://brightlife.example.com",
-    repo: "https://github.com/ya-shuvo30/brightlife-platform",
+    live: "https://yeasindev.me/work/brightlife",
+    repo: "https://github.com/ya-shuvo30/brightlife-membership",
     featured: true,
   },
   {
-    title: "Arriva Full-Stack Feature Suite",
+    title: "Arriva Service Hub",
     description:
-      "Delivered multi-tenant product modules with React/Next.js frontends, Django + Node services, and automated CI/CD shipping to AWS/Azure.",
+      "Multi-tenant feature suite for Arriva Soft with React/Next.js experiences, Django + Node micro services, and CI/CD pipelines that cut release cycles from weeks to days.",
     tech: ["Next.js", "Node.js", "Django", "AWS", "CI/CD"],
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80",
-    live: "https://arriva.example.com",
-    repo: "https://github.com/ya-shuvo30/arriva-products",
+    live: "https://yeasindev.me/work/arriva-service-hub",
     featured: true,
   },
   {
-    title: "Itransition API & ORM Layer",
+    title: "Itransition Integration Layer",
     description:
-      "Designed reusable backend modules with Django ORM, role-based access, and Azure deployments powering multiple internal apps.",
+      "Reusable Django ORM modules and FastAPI services with Azure deployments powering invoicing, billing, and access control across internal tools.",
     tech: ["Django REST", "FastAPI", "Azure", "PostgreSQL"],
     image: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1600&q=80",
-    live: "https://itransition.example.com",
+    live: "https://yeasindev.me/work/itransition",
   },
   {
     title: "Thinkland Learning Lab",
     description:
-      "Remote-first curriculum platform featuring live coding lessons, progress tracking, and reusable content blocks for global students.",
+      "Remote-first curriculum platform featuring live coding lessons, student analytics, and reusable lesson blocks for 200+ learners.",
     tech: ["React", "TypeScript", "Firebase", "Tailwind"],
     image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1600&q=80",
+    live: "https://yeasindev.me/work/thinkland",
   },
   {
     title: "Deployment Automation Toolkit",
@@ -57,13 +57,15 @@ const projects: Project[] = [
       "Docker Compose, Nginx, and GitHub Actions templates that standardize staging + production rollouts with zero-downtime deploys.",
     tech: ["Docker", "Nginx", "GitHub Actions", "AWS"],
     image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=80",
+    repo: "https://github.com/ya-shuvo30/deployment-automation-toolkit",
   },
   {
     title: "Health Insights Dashboard",
     description:
-      "Analytics workspace with Next.js, Zustand, and server-side search to visualize member activity, churn risk, and plan usage.",
+      "Analytics workspace with Next.js, Zustand, and server-side search to visualize member activity, churn risk, and plan usage dashboards for CX teams.",
     tech: ["Next.js", "Zustand", "PostgreSQL", "Tailwind"],
     image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80",
+    live: "https://yeasindev.me/work/health-insights",
   },
 ];
 

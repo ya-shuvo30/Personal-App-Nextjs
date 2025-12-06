@@ -13,9 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Alex Johnson | Developer Portfolio",
+  title: "Yeasin Arafat | Full-Stack Software Engineer",
   description:
-    "Modern full-stack developer portfolio showcasing React, TypeScript, and cloud-native work.",
+    "Portfolio for Yeasin Arafat highlighting React/Next.js builds, Django REST backends, and automated DevOps delivery.",
+  icons: {
+    icon: "https://img.icons8.com/?size=100&id=LoyAjcvVKv1K&format=png&color=000000",
+  },
 };
 
 export default function RootLayout({
