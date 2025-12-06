@@ -5,19 +5,19 @@ import { Code2, Lightbulb, Users, Coffee } from "lucide-react";
 import { Card } from "@/components/ui/card";
 
 const traits = [
+  "Full-Stack Strategist",
+  "API Architect",
+  "DevOps Advocate",
+  "Curriculum Mentor",
+  "System Designer",
   "Problem Solver",
-  "Team Player",
-  "Lifelong Learner",
-  "Detail Oriented",
-  "Mentor",
-  "Product Thinker",
 ];
 
 const features = [
-  { title: "Clean Code", description: "Type-safe, scalable architecture with thoughtful abstractions.", icon: Code2 },
-  { title: "Innovation", description: "Rapid prototyping with design systems and AI workflows.", icon: Lightbulb },
-  { title: "Collaboration", description: "Cross-functional partnerships and clear communication.", icon: Users },
-  { title: "Dedication", description: "Relentless focus on quality, performance, and polish.", icon: Coffee },
+  { title: "Reliable Code", description: "Type-safe React + Django stacks with clean API boundaries and automated testing.", icon: Code2 },
+  { title: "Product Velocity", description: "From Figma to production with UX polish, SEO, and measurable business outcomes.", icon: Lightbulb },
+  { title: "DevOps Mindset", description: "Docker, Nginx, CI/CD, and cloud deployments that keep releases boring.", icon: Coffee },
+  { title: "Knowledge Sharing", description: "Mentorship, curriculum design, and cross-team collaboration across time zones.", icon: Users },
 ];
 
 export function AboutSection() {
@@ -33,15 +33,16 @@ export function AboutSection() {
         >
           <div>
             <p className="pill-label text-emerald-300">About Me</p>
-            <h2 className="heading-xl text-white">Design-led engineering for ambitious teams.</h2>
+            <h2 className="heading-xl text-white">Engineering platforms that scale securely.</h2>
           </div>
           <p className="body-lg text-gray-300">
-            I build cohesive product experiences from concept to production. My background spans
-            design systems, front-end platforms, and cloud-native backends. I move fast without compromising craft.
+            I&apos;m a full-stack engineer from Dhaka who ships modern, secure web apps with React, Next.js, Django REST Framework,
+            and PostgreSQL. My sweet spot is blending delightful UI with pragmatic API design and database modeling.
           </p>
           <p className="body-lg text-gray-400">
-            Today I partner with startups and enterprises to launch interactive tools, enable AI-driven workflows,
-            and elevate engineering culture through mentorship and documentation.
+            At Arriva Soft I deliver end-to-end product features, while my past roles at Itransition Group and Thinkland.AI
+            strengthened my backend, deployment, and teaching chops. Every engagement includes documentation, observability,
+            and knowledge transfer so teams can move faster long after hand-off.
           </p>
           <div className="flex flex-wrap gap-3">
             {traits.map((trait) => (

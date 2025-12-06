@@ -1,22 +1,21 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Github, Linkedin, Send } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 
 const contacts = [
-  { icon: Mail, label: "Email", value: "alex.johnson@email.com" },
-  { icon: Phone, label: "Phone", value: "+1 (555) 123-4567" },
-  { icon: MapPin, label: "Location", value: "San Francisco, CA" },
+  { icon: Mail, label: "Email", value: "yeasinarafat.cs@gmail.com" },
+  { icon: Phone, label: "Phone", value: "+880 1851 257 710" },
+  { icon: MapPin, label: "Location", value: "Dhaka, Bangladesh" },
 ];
 
 const socials = [
-  { icon: Github, href: "https://github.com/alexjohnson" },
-  { icon: Linkedin, href: "https://linkedin.com/in/alexjohnson" },
-  { icon: Twitter, href: "https://twitter.com/alexjohnson" },
-  { icon: Mail, href: "mailto:alex.johnson@email.com" },
+  { icon: Github, href: "https://github.com/ya-shuvo30" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/yeasin-arafat650" },
+  { icon: Mail, href: "mailto:yeasinarafat.cs@gmail.com" },
 ];
 
 export function ContactSection() {
@@ -33,7 +32,7 @@ export function ContactSection() {
           <p className="pill-label text-emerald-300">Contact</p>
           <h2 className="heading-xl text-white">Let&apos;s build something remarkable.</h2>
           <p className="body-lg mb-8 text-gray-400">
-            Share a short brief and I&apos;ll respond within two business days. I partner with founders, agencies, and in-house teams.
+            Share a short brief and I&apos;ll respond within two business days. I support founders, product teams, and agencies shipping secure platforms.
           </p>
           <form
             className="space-y-4"
@@ -61,7 +60,7 @@ export function ContactSection() {
           <div className="rounded-3xl border border-white/10 bg-gray-900/40 p-8">
             <p className="heading-lg text-white">Let&apos;s connect</p>
             <p className="body-base mt-3 text-gray-400">
-              Prefer async updates with detailed documentation and Loom walk-throughs. Open to consulting or full-time offers.
+              Prefer async updates with detailed documentation and Loom walk-throughs. Open to consulting, contract, or full-time opportunities.
             </p>
             <div className="mt-6 space-y-4">
               {contacts.map(({ icon: Icon, label, value }) => (
@@ -99,7 +98,7 @@ export function ContactSection() {
               ))}
             </div>
           </div>
-          <p className="body-sm text-gray-500">© {new Date().getFullYear()} Alex Johnson. All rights reserved.</p>
+          <p className="body-sm text-gray-500">© {new Date().getFullYear()} Yeasin Arafat. All rights reserved.</p>
         </motion.div>
       </div>
     </section>

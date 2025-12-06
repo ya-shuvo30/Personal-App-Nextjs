@@ -5,9 +5,9 @@ import { Github, Linkedin, Mail, ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const socials = [
-  { icon: Github, href: "https://github.com/alexjohnson", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com/in/alexjohnson", label: "LinkedIn" },
-  { icon: Mail, href: "mailto:alex.johnson@email.com", label: "Email" },
+  { icon: Github, href: "https://github.com/ya-shuvo30", label: "GitHub" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/yeasin-arafat650", label: "LinkedIn" },
+  { icon: Mail, href: "mailto:yeasinarafat.cs@gmail.com", label: "Email" },
 ];
 
 const particles = Array.from({ length: 50 }, (_, index) => {
@@ -44,7 +44,7 @@ export function HeroSection() {
           />
         ))}
       </div>
-      <div className="relative flex w-full flex-col gap-12">
+      <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-12">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -54,11 +54,14 @@ export function HeroSection() {
           <span className="pill-label inline-flex w-fit items-center gap-2 rounded-full border border-emerald-500/40 px-5 py-2 text-emerald-300">
             <span className="h-2 w-2 rounded-full bg-emerald-400" /> Hello, I&apos;m
           </span>
-          <h1 className="display-hero text-white">Alex Johnson</h1>
-          <p className="heading-lg gradient-text">Full-Stack Developer</p>
+          <h1 className="display-hero text-white">Yeasin Arafat</h1>
+          <p className="heading-lg gradient-text">Full-Stack Software Engineer</p>
           <p className="body-lg max-w-2xl text-gray-300">
-            I craft immersive digital experiences with modern web technologies. From
-            interactive dashboards to AI-powered tools, I fuse thoughtful design with robust engineering.
+            I help ambitious teams ship production-ready platforms that blend fast, SEO-friendly interfaces with robust Django/
+            FastAPI backends, PostgreSQL data models, and automated delivery pipelines.
+          </p>
+          <p className="body-base text-gray-400">
+            Dhaka, Bangladesh | +880 1851 257 710 | yeasinarafat.cs@gmail.com
           </p>
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
             <Button
@@ -90,7 +93,7 @@ export function HeroSection() {
           transition={{ delay: 0.5, duration: 0.9 }}
           className="flex flex-wrap gap-4 text-gray-400"
         >
-          {["React", "TypeScript", "Next.js", "Node.js", "Motion"].map((tag) => (
+          {["React", "Next.js", "Django REST", "PostgreSQL", "Docker", "AWS"].map((tag) => (
             <span
               key={tag}
               className="body-sm rounded-full border border-white/10 px-4 py-2 text-gray-300"

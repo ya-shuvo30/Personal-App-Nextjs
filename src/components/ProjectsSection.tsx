@@ -17,47 +17,53 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "E-Commerce Platform",
-    description: "Modular storefront with advanced search, analytics, and multi-tenant support.",
-    tech: ["Next.js", "Stripe", "PostgreSQL"],
-    image: "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1600&q=80",
-    live: "https://commerce.example.com",
-    repo: "https://github.com/alexjohnson/ecommerce-platform",
+    title: "BrightLife Membership Platform",
+    description:
+      "Full-stack health membership ecosystem with dynamic benefits, PDF generation, JWT auth, and Celery-powered background jobs.",
+    tech: ["Next.js", "Django REST", "PostgreSQL", "Redis", "Docker"],
+    image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1600&q=80",
+    live: "https://brightlife.example.com",
+    repo: "https://github.com/ya-shuvo30/brightlife-platform",
     featured: true,
   },
   {
-    title: "Task Management App",
-    description: "Realtime collaboration for teams with kanban, automations, and AI assistants.",
-    tech: ["React", "Firebase", "Motion"],
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80",
-    live: "https://tasks.example.com",
-    repo: "https://github.com/alexjohnson/task-manager",
+    title: "Arriva Full-Stack Feature Suite",
+    description:
+      "Delivered multi-tenant product modules with React/Next.js frontends, Django + Node services, and automated CI/CD shipping to AWS/Azure.",
+    tech: ["Next.js", "Node.js", "Django", "AWS", "CI/CD"],
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80",
+    live: "https://arriva.example.com",
+    repo: "https://github.com/ya-shuvo30/arriva-products",
     featured: true,
   },
   {
-    title: "Weather Dashboard",
-    description: "Global climate insights with radar layers, severe alerts, and location bookmarks.",
-    tech: ["Vue", "D3", "Mapbox"],
-    image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1600&q=80",
-    live: "https://weather.example.com",
+    title: "Itransition API & ORM Layer",
+    description:
+      "Designed reusable backend modules with Django ORM, role-based access, and Azure deployments powering multiple internal apps.",
+    tech: ["Django REST", "FastAPI", "Azure", "PostgreSQL"],
+    image: "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1600&q=80",
+    live: "https://itransition.example.com",
   },
   {
-    title: "Social Media Analytics",
-    description: "Cross-network reporting with sentiment analysis, scheduling, and KPI tracking.",
-    tech: ["Next.js", "Prisma", "Tailwind"],
-    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80",
+    title: "Thinkland Learning Lab",
+    description:
+      "Remote-first curriculum platform featuring live coding lessons, progress tracking, and reusable content blocks for global students.",
+    tech: ["React", "TypeScript", "Firebase", "Tailwind"],
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1600&q=80",
   },
   {
-    title: "AI Chat Interface",
-    description: "Conversational AI dashboard with knowledge-base retrieval and handoff flows.",
-    tech: ["React", "LangChain", "Supabase"],
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80",
+    title: "Deployment Automation Toolkit",
+    description:
+      "Docker Compose, Nginx, and GitHub Actions templates that standardize staging + production rollouts with zero-downtime deploys.",
+    tech: ["Docker", "Nginx", "GitHub Actions", "AWS"],
+    image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1600&q=80",
   },
   {
-    title: "Portfolio Website",
-    description: "Interactive personal brand site with CMS-powered case studies and 3D visuals.",
-    tech: ["Next.js", "Three.js", "Contentful"],
-    image: "https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&w=1600&q=80",
+    title: "Health Insights Dashboard",
+    description:
+      "Analytics workspace with Next.js, Zustand, and server-side search to visualize member activity, churn risk, and plan usage.",
+    tech: ["Next.js", "Zustand", "PostgreSQL", "Tailwind"],
+    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80",
   },
 ];
 
@@ -72,7 +78,7 @@ export function ProjectsSection() {
           <p className="pill-label text-emerald-300">Projects</p>
           <h2 className="heading-xl text-white">Results-focused case studies.</h2>
           <p className="body-lg text-gray-400">
-            Selected work spanning commerce, analytics, and creative tooling. Each project pairs modern UX with resilient infrastructure.
+            Real-world solutions for health, education, and enterprise teams—each blending delightful UX with hardened APIs, DevOps, and observability.
           </p>
         </div>
         <div className="grid gap-6 lg:grid-cols-2">

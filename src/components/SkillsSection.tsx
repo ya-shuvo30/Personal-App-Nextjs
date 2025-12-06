@@ -4,30 +4,30 @@ import { motion } from "motion/react";
 
 const categories = [
   {
-    title: "Frontend",
+    title: "Frontend Platforms",
     skills: [
-      { label: "React / Next.js", value: 95, gradient: "from-emerald-400 to-emerald-600" },
+      { label: "React / Next.js", value: 94, gradient: "from-emerald-400 to-emerald-600" },
       { label: "TypeScript", value: 90, gradient: "from-blue-400 to-emerald-400" },
       { label: "Tailwind CSS", value: 88, gradient: "from-purple-400 to-pink-500" },
-      { label: "Vue.js", value: 75, gradient: "from-blue-500 to-indigo-500" },
+      { label: "Zustand & UI State", value: 82, gradient: "from-sky-400 to-indigo-500" },
     ],
   },
   {
-    title: "Backend",
+    title: "Backend & APIs",
     skills: [
-      { label: "Node.js", value: 90, gradient: "from-emerald-400 to-blue-500" },
-      { label: "Python", value: 85, gradient: "from-sky-400 to-blue-600" },
-      { label: "PostgreSQL", value: 80, gradient: "from-blue-500 to-purple-500" },
-      { label: "MongoDB", value: 78, gradient: "from-emerald-500 to-green-500" },
+      { label: "Django REST Framework", value: 93, gradient: "from-emerald-400 to-blue-500" },
+      { label: "FastAPI", value: 85, gradient: "from-blue-500 to-cyan-400" },
+      { label: "Node.js", value: 78, gradient: "from-amber-400 to-orange-500" },
+      { label: "JWT/Auth & Role Logic", value: 80, gradient: "from-pink-400 to-purple-500" },
     ],
   },
   {
-    title: "Tools & Others",
+    title: "DevOps & Data",
     skills: [
-      { label: "Git & GitHub", value: 92, gradient: "from-orange-400 to-rose-500" },
-      { label: "Docker", value: 82, gradient: "from-blue-500 to-cyan-400" },
-      { label: "AWS", value: 75, gradient: "from-amber-400 to-yellow-500" },
-      { label: "GraphQL", value: 70, gradient: "from-pink-400 to-purple-500" },
+      { label: "PostgreSQL Schema Design", value: 90, gradient: "from-blue-500 to-purple-500" },
+      { label: "Docker & Compose", value: 85, gradient: "from-blue-500 to-cyan-400" },
+      { label: "Redis & Celery", value: 82, gradient: "from-emerald-500 to-green-500" },
+      { label: "AWS / Azure Deployments", value: 75, gradient: "from-amber-400 to-yellow-500" },
     ],
   },
 ];
@@ -36,15 +36,21 @@ const techStack = [
   "React",
   "Next.js",
   "TypeScript",
-  "Node.js",
-  "Prisma",
-  "PostgreSQL",
-  "MongoDB",
-  "GraphQL",
-  "Docker",
-  "AWS",
+  "Tailwind CSS",
+  "Zustand",
   "Python",
-  "Tailwind",
+  "Django REST",
+  "FastAPI",
+  "Node.js",
+  "PostgreSQL",
+  "Redis",
+  "Celery",
+  "Docker",
+  "Nginx",
+  "Git/GitHub",
+  "CI/CD",
+  "AWS",
+  "Azure",
 ];
 
 export function SkillsSection() {
@@ -53,9 +59,9 @@ export function SkillsSection() {
       <div className="mx-auto flex max-w-6xl flex-col gap-12">
         <div className="flex flex-col gap-4">
           <p className="pill-label text-emerald-300">Skills</p>
-          <h2 className="heading-xl text-white">A full-stack toolbox for bold products.</h2>
+          <h2 className="heading-xl text-white">Production-ready skills across the stack.</h2>
           <p className="body-lg text-gray-400">
-            I combine user-centric design with systems thinking to deliver reliable interfaces, APIs, and deployment pipelines.
+            From pixel-perfect dashboards to hardened APIs and Dockerized deployments, I tailor each stack to the product goals, performance targets, and team capacity.
           </p>
         </div>
         <div className="grid gap-8 lg:grid-cols-3">
