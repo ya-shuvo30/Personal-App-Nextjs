@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Developer Portfolio Website
+
+Modern, dark-themed portfolio for a full-stack engineer. Built with Next.js App Router, TypeScript, Tailwind CSS v4, Motion animations, and Lucide icons. The experience features micro-interactions, scroll-triggered reveals, and reusable UI primitives inspired by shadcn/ui.
+
+## Tech Stack
+
+- Next.js 16 (App Router) + TypeScript
+- Tailwind CSS v4 with custom tokens defined in `src/app/globals.css`
+- Motion (formerly Framer Motion) for scroll + hover animations
+- Lucide React icon set
+- Custom UI components (`button`, `card`, `input`, `textarea`) for consistent styling
+
+## Key Sections
+
+| Section | Highlights |
+| --- | --- |
+| Navigation | Sticky, translucent nav with smooth scroll |
+| Hero | Particle background, gradient typography, CTA + social icons |
+| About | Bio copy, trait pills, feature cards |
+| Skills | Animated progress bars, tech pills |
+| Projects | Featured + grid cards using `ImageWithFallback` |
+| Contact | Styled form, contact cards, social buttons |
+
+## Project Structure
+
+```text
+src/
+├── app/
+│   ├── globals.css        # Theme tokens, typography helpers, utilities
+│   ├── layout.tsx         # Metadata + global layout
+│   └── page.tsx           # Composes all sections
+└── components/
+    ├── Navigation.tsx
+    ├── HeroSection.tsx
+    ├── AboutSection.tsx
+    ├── SkillsSection.tsx
+    ├── ProjectsSection.tsx
+    ├── ContactSection.tsx
+    ├── figma/ImageWithFallback.tsx
+    └── ui/{button,card,input,textarea}.tsx
+```
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Local dev server: <http://localhost:3000>
+- Lint: `npm run lint`
+- Production build: `npm run build`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Customization
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Update hero/about copy and social links inside their respective components.
+- Adjust skill values or project data by editing arrays in `SkillsSection.tsx` and `ProjectsSection.tsx`.
+- Replace Unsplash images or add new hosts via `next.config.ts` (`images.remotePatterns`).
+- Tailwind utility classes and custom typography helpers live in `globals.css` for easy theme tweaks.
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+Host on Vercel for the best Next.js experience:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Create a new Vercel project connected to this repository.
+2. Set framework preset to Next.js; defaults work out of the box.
+3. After deployment, add any additional image domains to `next.config.ts` if assets are hosted elsewhere.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+For other hosts (Netlify, AWS, etc.), ensure `npm run build` passes and serve the generated `.next` output via the platform’s Next.js adapter.
