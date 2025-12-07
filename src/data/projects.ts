@@ -400,7 +400,7 @@ export const projectsData: ProjectDetail[] = [
     title: "Arriva Soft Digital Platform",
     tagline: "Modern React TypeScript corporate website with hero carousel, mega menu navigation, interactive dashboards, and responsive design for digital transformation services.",
     description: "Corporate website for Arriva Soft built with React 18, TypeScript, Next.js App Router, and Tailwind CSS featuring auto-rotating hero carousel, mega menu, and interactive project dashboard.",
-    heroImage: "/images/projects/arrivasoft/frontend/Screenshot (75).png",
+    heroImage: "/images/projects/arrivasoft/frontend/Screenshot (76).png",
     liveUrl: "https://arrivasoft.com",
     repoUrl: "https://github.com/yeasin-dev-me/arriva-app-nextjs",
 
@@ -449,11 +449,10 @@ export const projectsData: ProjectDetail[] = [
     ],
 
     screenshots: [
-      { src: "/images/projects/arrivasoft/frontend/Screenshot (75).png", alt: "Hero Section", caption: "Hero Carousel - Auto-Rotating Slides with CTA Buttons" },
-      { src: "/images/projects/arrivasoft/frontend/Screenshot (76).png", alt: "Project Dashboard", caption: "Project Order Dashboard - Interactive Donut Chart with Metrics" },
-      { src: "/images/projects/arrivasoft/frontend/Screenshot (77).png", alt: "Services Grid", caption: "Services Section - 8 Service Cards with Icons and Hover Effects" },
-      { src: "/images/projects/arrivasoft/frontend/Screenshot (78).png", alt: "Industries Section", caption: "Industries We Serve - Categorized Industry Showcase" },
-      { src: "/images/projects/arrivasoft/frontend/Screenshot (80).png", alt: "Footer", caption: "Footer - Multi-Column Layout with Social Links" },
+      { src: "/images/projects/arrivasoft/frontend/Screenshot (76).png", alt: "Hero Section", caption: "Hero Carousel - Auto-Rotating Slides with CTA Buttons" },
+      { src: "/images/projects/arrivasoft/frontend/Screenshot (77).png", alt: "Project Dashboard", caption: "Project Order Dashboard - Interactive Donut Chart with Metrics" },
+      { src: "/images/projects/arrivasoft/frontend/Screenshot (78).png", alt: "Services Grid", caption: "Services Section - 8 Service Cards with Icons and Hover Effects" },
+      { src: "/images/projects/arrivasoft/frontend/Screenshot (80).png", alt: "Industries Section", caption: "Industries We Serve - Categorized Industry Showcase" },
     ],
 
     metrics: [
