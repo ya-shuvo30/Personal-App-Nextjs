@@ -26,7 +26,7 @@ export interface ProjectScreenshot {
 
 export interface ProjectDetail {
   slug: string;
-  category: "backend" | "frontend" | "ml";
+  category: "fullstack" | "backend" | "frontend" | "ml";
   title: string;
   tagline: string;
   description: string;
@@ -92,11 +92,172 @@ export interface ProjectProcess {
 }
 
 export const projectsData: ProjectDetail[] = [
+  // ========== FULL-STACK PROJECTS ==========
+  {
+    slug: "brightlife-ims",
+    category: "fullstack",
+    title: "Enterprise Inventory & Discussion Management System",
+    tagline: "Full-stack ASP.NET Core 8 MVC inventory management with Identity authentication, EF Core, SQLite for local dev, and PostgreSQL for Azure App Service production.",
+    description: "Enterprise-grade inventory management system featuring user authentication with Google OAuth, EF Core data persistence, Bootstrap 5 responsive UI, and automated Azure deployment with Bicep infrastructure-as-code.",
+    heroImage: "/images/projects/IMS_Project/Screenshot 2026-01-01 162011.png",
+    liveUrl: "https://app-bl-pstn3hojje7gu.azurewebsites.net",
+    repoUrl: "https://github.com/ya-shuvo30/InventoryManagement_App",
+
+    client: "BrightLife Health Services",
+    industry: "Healthcare / Enterprise / Inventory Management",
+    duration: "Ongoing (2025 – Present)",
+    role: "Full-Stack Developer",
+    overview: "This Enterprise Inventory & Discussion Management System is a production-grade ASP.NET Core 8 MVC application designed for comprehensive inventory tracking and team collaboration. It features Identity-based authentication with Google OAuth, Entity Framework Core with SQLite for local development and PostgreSQL for production, Bootstrap 5.3.3 responsive UI, and is deployed on Azure App Service with infrastructure defined in Bicep. The solution follows a structured SDLC with GitHub-based CI/CD, comprehensive testing, and operational monitoring via Application Insights.",
+
+    challengeIntro: "BrightLife Health Services needed a robust, enterprise-grade inventory management system to replace manual tracking processes:",
+    painPoints: [
+      "No centralized inventory tracking - Items managed via spreadsheets with no audit trail",
+      "No authentication system - Shared credentials with no role-based access control",
+      "No cloud deployment - Local-only solutions with no remote access capability",
+      "No automated testing - Manual QA processes slowing down releases",
+      "No infrastructure-as-code - Manual Azure resource provisioning prone to errors",
+      "No discussion/collaboration features - Inventory decisions made offline without tracking",
+    ],
+    challengeConclusion: "They needed a modern full-stack solution with secure authentication, cloud deployment, automated CI/CD, and comprehensive testing to ensure reliability and scalability.",
+
+    solutionIntro: "I designed and implemented a complete full-stack solution with enterprise-grade architecture:",
+    architectureImage: "/images/projects/IMS_Project/Screenshot 2026-01-01 162123.png",
+    solutionPoints: [
+      { title: "ASP.NET Core 8 MVC", description: "Modern .NET 8 application with Razor views, Identity authentication, and EF Core 8 for data access. Supports both SQLite (local dev) and PostgreSQL (production) via provider abstraction." },
+      { title: "Azure Cloud Deployment", description: "Production deployment on Azure App Service with Azure Database for PostgreSQL. Infrastructure defined in Bicep for repeatable, version-controlled provisioning." },
+      { title: "Google OAuth Integration", description: "Secure authentication via ASP.NET Core Identity with Google OAuth support. User secrets for local development, Key Vault for production credentials." },
+      { title: "SDLC & DevOps", description: "Structured workflow with feature branching, PR reviews, automated testing (unit + integration), and CI/CD via GitHub Actions. Application Insights for runtime monitoring." },
+    ],
+
+    process: {
+      description: "This SDLC defines how we build, test, release, and operate the Enterprise Inventory & Discussion Management System, ensuring delivery stays consistent and production-ready.",
+      steps: [
+        {
+          title: "1. Plan",
+          description: "Define user story with acceptance criteria, data needs, and non-functional requirements (performance, security, accessibility). Capture in GitHub issue.",
+          checklist: [
+            "Define user story with acceptance criteria",
+            "Identify data model changes and API surface",
+            "Call out partitioning/indexing for Postgres",
+            "Seek review for risky/infra-heavy changes",
+          ],
+          deliverables: "GitHub issue with acceptance criteria, architecture notes, rough data model sketch.",
+        },
+        {
+          title: "2. Design",
+          description: "Update architecture notes including data model changes, API surface, UI flow, and infra/Bicep changes. Plan caching strategy and review for risky changes.",
+          checklist: [
+            "Update architecture documentation",
+            "Plan database migrations",
+            "Design UI flows and responsive layouts",
+          ],
+          deliverables: "Architecture notes, migration plan, UI mockups.",
+        },
+        {
+          title: "3. Build",
+          description: "Follow .NET conventions, keep DI-friendly services, avoid static state. Align provider choice (SQLite vs Postgres) with environment. Keep migrations atomic.",
+          checklist: [
+            "Follow .NET conventions and DI patterns",
+            "Create atomic, named migrations",
+            "Add unit/integration tests near code",
+          ],
+          deliverables: "Working code with tests, EF migrations, updated documentation.",
+        },
+        {
+          title: "4. Test",
+          description: "Run dotnet test from solution root. For data changes, run EF migrations and smoke CRUD paths locally. For auth flows, manual Google OAuth login.",
+          checklist: [
+            "Run dotnet test from solution root",
+            "Smoke test CRUD paths locally",
+            "Validate responsive layout on desktop + mobile",
+          ],
+          deliverables: "Passing test suite, manual test results documented in PR.",
+        },
+        {
+          title: "5. Review",
+          description: "Security (authZ/authN), data correctness, nullable handling, logging/exception paths, migration safety, performance (N+1, large includes), and test coverage.",
+          checklist: [
+            "Verify auth/role checks",
+            "Check for N+1 queries and performance issues",
+            "Ensure secrets kept out of code",
+          ],
+          deliverables: "Approved PR with all review comments resolved.",
+        },
+        {
+          title: "6. Release",
+          description: "Prefer automated deploy via azd or GitHub Actions. Pre-flight: build in Release, run EF migrations against staging, confirm secrets/connection strings.",
+          checklist: [
+            "Build in Release configuration",
+            "Apply EF migrations to target database",
+            "Backup database before schema changes",
+          ],
+          deliverables: "Tagged release, deployment notes, rollback plan.",
+        },
+        {
+          title: "7. Operate",
+          description: "Monitor App Insights dashboards, set alerts on failure rate and latency. Log rollout notes and known issues. Rotate secrets on schedule.",
+          checklist: [
+            "Monitor App Insights dashboards",
+            "Set alerts on failure rate and latency",
+            "Document known issues and rollback steps",
+          ],
+          deliverables: "Monitoring dashboards, incident response documentation.",
+        },
+      ],
+    },
+
+    features: [
+      { icon: "🔐", title: "Identity + OAuth", description: "ASP.NET Core Identity with Google OAuth integration for secure, flexible authentication." },
+      { icon: "📦", title: "Inventory CRUD", description: "Full create, read, update, delete operations for inventory items with search and filtering." },
+      { icon: "💬", title: "Discussion System", description: "Built-in discussion features for team collaboration on inventory decisions." },
+      { icon: "☁️", title: "Azure Deployment", description: "Production hosting on Azure App Service with PostgreSQL and Key Vault secrets." },
+      { icon: "🔄", title: "EF Core Migrations", description: "Atomic database migrations supporting SQLite (dev) and PostgreSQL (prod) providers." },
+      { icon: "📊", title: "Application Insights", description: "Runtime telemetry, error tracking, and performance monitoring via Azure Monitor." },
+    ],
+
+    techStack: [
+      { category: "Backend", items: [".NET 8", "ASP.NET Core MVC", "EF Core 8", "Identity"] },
+      { category: "Frontend", items: ["Razor Views", "Bootstrap 5.3.3", "jQuery 3.7.1"] },
+      { category: "Database", items: ["SQLite (Dev)", "PostgreSQL (Prod)", "EF Migrations"] },
+      { category: "Infrastructure", items: ["Azure App Service", "Azure Database for PostgreSQL", "Bicep", "Docker Compose"] },
+      { category: "Auth", items: ["ASP.NET Core Identity", "Google OAuth", "Key Vault"] },
+      { category: "DevOps", items: ["GitHub Actions", "Application Insights", "Log Analytics"] },
+    ],
+
+    screenshots: [
+      { src: "/images/projects/IMS_Project/Screenshot 2026-01-01 162011.png", alt: "Dashboard", caption: "Main dashboard with inventory overview" },
+      { src: "/images/projects/IMS_Project/Screenshot 2026-01-01 162123.png", alt: "Inventory List", caption: "Inventory items list with search and filters" },
+      { src: "/images/projects/IMS_Project/Screenshot 2026-01-01 162303.png", alt: "Item Details", caption: "Detailed inventory item view" },
+      { src: "/images/projects/IMS_Project/Screenshot 2026-01-01 162428.png", alt: "Add Item", caption: "Add new inventory item form" },
+      { src: "/images/projects/IMS_Project/Screenshot 2026-01-01 162455.png", alt: "Edit Item", caption: "Edit inventory item with validation" },
+      { src: "/images/projects/IMS_Project/Screenshot 2026-01-01 162504.png", alt: "Discussion", caption: "Discussion thread for inventory decisions" },
+      { src: "/images/projects/IMS_Project/Screenshot 2026-01-01 162527.png", alt: "User Management", caption: "User and role management interface" },
+      { src: "/images/projects/IMS_Project/Screenshot 2026-01-01 162554.png", alt: "Reports", caption: "Inventory reports and analytics" },
+      { src: "/images/projects/IMS_Project/Screenshot 2026-01-01 162622.png", alt: "Settings", caption: "Application settings and configuration" },
+      { src: "/images/projects/IMS_Project/Screenshot 2026-01-01 162643.png", alt: "Mobile View", caption: "Responsive mobile layout" },
+    ],
+
+    metrics: [
+      { value: "100%", label: "Cloud-Native", subLabel: "Azure Deployment" },
+      { value: ".NET 8", label: "Latest LTS", subLabel: "Framework" },
+      { value: "2 DBs", label: "SQLite + Postgres", subLabel: "Provider Support" },
+      { value: "IaC", label: "Bicep", subLabel: "Infrastructure" },
+    ],
+    achievements: [
+      "Deployed to Azure App Service with PostgreSQL backend",
+      "Implemented Google OAuth with ASP.NET Core Identity",
+      "Created Bicep infrastructure-as-code for repeatable deployments",
+      "Established comprehensive SDLC with CI/CD via GitHub Actions",
+      "Integrated Application Insights for runtime monitoring",
+      "Built responsive UI with Bootstrap 5.3.3",
+    ],
+  },
+
   // ========== BACKEND PROJECTS ==========
   {
     slug: "brightlife-membership-platform",
     category: "backend",
-    title: "BrightLife Membership Platform (Backend)",
+    title: "Healthcare Membership REST API Platform",
     tagline: "Layered SPA + modular monolith Django REST API with JWT authentication, payment verification, automated receipt generation, and VPS deployment for healthcare membership management.",
     description: "Comprehensive backend API for health membership management platform handling user registration, application processing, payment verification, and auto-generated receipts with QR codes.",
     heroImage: "/images/projects/brightlife/backend/Screenshot (72).png",
@@ -281,7 +442,7 @@ export const projectsData: ProjectDetail[] = [
   {
     slug: "brightlife-membership-frontend",
     category: "frontend",
-    title: "BrightLife Membership Platform (Frontend)",
+    title: "Healthcare Membership Portal Frontend",
     tagline: "Modern React TypeScript application with multi-step forms, real-time validation, PDF generation, and optimized performance for healthcare membership management.",
     description: "Performance-optimized React TypeScript frontend with multi-step membership forms, real-time validation, client-side PDF generation, and Django REST API integration.",
     heroImage: "/images/projects/brightlife/Frontend/Screenshot (68).png",
@@ -372,7 +533,7 @@ export const projectsData: ProjectDetail[] = [
   {
     slug: "arriva-service-hub",
     category: "frontend",
-    title: "Arriva Soft Digital Platform",
+    title: "Enterprise Digital Transformation Website",
     tagline: "Modern React TypeScript corporate website with hero carousel, mega menu navigation, interactive dashboards, and responsive design for digital transformation services.",
     description: "Corporate website for Arriva Soft built with React 18, TypeScript, Next.js App Router, and Tailwind CSS featuring auto-rotating hero carousel, mega menu, and interactive project dashboard.",
     heroImage: "/images/projects/arrivasoft/frontend/Screenshot (76).png",
@@ -461,7 +622,7 @@ export const projectsData: ProjectDetail[] = [
   {
     slug: "thinkland-learning-lab",
     category: "frontend",
-    title: "Thinkland Learning Lab",
+    title: "Remote Learning Platform with Live Coding",
     tagline: "Remote-first curriculum platform with live coding lessons and student analytics.",
     description: "Remote-first curriculum platform featuring live coding lessons, student analytics, and reusable lesson blocks for 200+ learners.",
     heroImage: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1600&q=80",
@@ -527,7 +688,7 @@ export const projectsData: ProjectDetail[] = [
   {
     slug: "health-insights-dashboard",
     category: "frontend",
-    title: "Health Insights Dashboard",
+    title: "Healthcare Analytics & Churn Prediction Dashboard",
     tagline: "Analytics workspace with Next.js and server-side search for CX teams.",
     description: "Analytics workspace with Next.js, Zustand, and server-side search to visualize member activity, churn risk, and plan usage dashboards for CX teams.",
     heroImage: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80",
@@ -594,7 +755,7 @@ export const projectsData: ProjectDetail[] = [
   {
     slug: "human-genomic-mutation-analysis",
     category: "ml",
-    title: "Human Genomic Mutation Analysis",
+    title: "Genomic Mutation Analysis with Hybrid ML Models",
     tagline: "Hybrid machine learning model for understanding human genomic dynamics and mutation patterns with comprehensive EDA and predictive modeling.",
     description: "Applied hybrid machine learning approach combining multiple algorithms to analyze human genomic data, understand mutation dynamics, and predict genetic variations with extensive exploratory data analysis.",
     heroImage: "/images/projects/ML-projects/Mutation-data/Screenshot (82).png",
@@ -682,7 +843,7 @@ export const projectsData: ProjectDetail[] = [
   {
     slug: "churn-prediction-model",
     category: "ml",
-    title: "Churn Prediction Model",
+    title: "Customer Churn Prediction ML Pipeline",
     tagline: "Scikit-learn pipeline predicting member churn with 89% accuracy.",
     description: "Scikit-learn pipeline predicting member churn with 89% accuracy using historical activity, plan usage, and engagement signals.",
     heroImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1600&q=80",
@@ -749,7 +910,7 @@ export const projectsData: ProjectDetail[] = [
   {
     slug: "document-classification-api",
     category: "ml",
-    title: "Document Classification API",
+    title: "NLP Document Classification & Entity Extraction API",
     tagline: "NLP microservice classifying PDFs and extracting key entities.",
     description: "NLP microservice classifying uploaded PDFs by type and extracting key entities using spaCy and Hugging Face transformers.",
     heroImage: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=1600&q=80",
@@ -816,7 +977,7 @@ export const projectsData: ProjectDetail[] = [
   {
     slug: "recommendation-engine",
     category: "ml",
-    title: "Recommendation Engine",
+    title: "Personalized Health Plan Recommendation Engine",
     tagline: "Collaborative filtering engine for personalized plan suggestions.",
     description: "Collaborative filtering engine generating personalized plan suggestions based on member demographics and behavior clusters.",
     heroImage: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=1600&q=80",

@@ -7,8 +7,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 
 const contacts = [
-  { icon: Mail, label: "Email", value: "Contact via Upwork" },
-  { icon: Phone, label: "Phone", value: "Contact via Upwork" },
+  { icon: Mail, label: "Email", value: "yeasinarafat.cs@gmail.com" },
+  { icon: Phone, label: "Phone", value: "+880 1851 257 710" },
   { icon: MapPin, label: "Location", value: "Dhaka, Bangladesh" },
 ];
 
@@ -31,7 +31,7 @@ export function ContactSection() {
           <p className="pill-label text-emerald-300">Contact</p>
           <h2 className="heading-xl text-white">Let&apos;s build something remarkable.</h2>
           <p className="body-lg mb-8 text-gray-400">
-            Please message me directly on Upwork to discuss your project. I support founders, product teams, and agencies shipping secure platforms.
+            Feel free to reach out directly to discuss your project. I support founders, product teams, and agencies shipping secure platforms.
           </p>
           <form
             className="space-y-4"

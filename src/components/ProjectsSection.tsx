@@ -6,8 +6,9 @@ import { Server, Layout, Brain, ChevronRight } from "lucide-react";
 import { ImageWithFallback } from "@/components/figma/ImageWithFallback";
 import { Card } from "@/components/ui/card";
 import { projectsData } from "@/data/projects";
+import { Layers } from "lucide-react";
 
-type Category = "backend" | "frontend" | "ml";
+type Category = "fullstack" | "backend" | "frontend" | "ml";
 
 interface CategoryMeta {
   label: string;
@@ -17,16 +18,24 @@ interface CategoryMeta {
 }
 
 const categoryMeta: Record<Category, CategoryMeta> = {
+  fullstack: { label: "Full-Stack Projects", icon: Layers, color: "text-amber-300", gradient: "from-amber-400/60 to-transparent" },
   backend: { label: "Backend Projects", icon: Server, color: "text-sky-300", gradient: "from-sky-400/60 to-transparent" },
   frontend: { label: "Frontend Projects", icon: Layout, color: "text-emerald-300", gradient: "from-emerald-400/60 to-transparent" },
   ml: { label: "ML Projects", icon: Brain, color: "text-purple-300", gradient: "from-purple-400/60 to-transparent" },
 };
 
+// Projects that should also appear in the Full-Stack section (in addition to their own category)
+const fullstackShowcaseSlugs = ["brightlife-membership-platform", "brightlife-membership-frontend"];
+
+const fullstackProjects = projectsData.filter(
+  (p) => p.category === "fullstack" || fullstackShowcaseSlugs.includes(p.slug)
+);
 const backendProjects = projectsData.filter((p) => p.category === "backend");
 const frontendProjects = projectsData.filter((p) => p.category === "frontend");
 const mlProjects = projectsData.filter((p) => p.category === "ml");
 
 const categories: { key: Category; projects: typeof projectsData }[] = [
+  { key: "fullstack", projects: fullstackProjects },
   { key: "backend", projects: backendProjects },
   { key: "frontend", projects: frontendProjects },
   { key: "ml", projects: mlProjects },
